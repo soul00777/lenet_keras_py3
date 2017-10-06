@@ -49,7 +49,7 @@ model.compile(loss="categorical_crossentropy", optimizer="sgd", metrics=["accura
 train = input("Do you want to train the LeNet now? (Y for train, N for NOT to train and load the pre-trained weight from hdf5 file) ")
 if train == "Y":
     print("[INFO] training...")
-    model.fit(data_train, label_train, batch_size=400, epochs=1, verbose=1)
+    model.fit(data_train, label_train, batch_size=400, epochs=200, verbose=1)
     wname = input("Enter the name of weights file you want to save: ")
     print("[INFO] overwrite weights to file...")
     model.save_weights(wname, overwrite=True)
